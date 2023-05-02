@@ -1,0 +1,87 @@
+.button {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  padding: 5px 10px;
+}
+
+@mixin clear {
+  margin: 0;
+  padding: 0;
+
+  color: var(--font-color);
+
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.clear {
+  @include clear;
+}
+
+.outline {
+  color: var(--font-color);
+
+  background: none;
+  border: 1px solid var(--font-color);
+}
+
+.filled {
+  @include clear;
+  padding: 10px;
+
+  color: white;
+
+  background: var(--gradient);
+}
+
+.shadow {
+  @include clear;
+  padding: 10px;
+
+  box-shadow: 0 3px 10px 0 rgb(0 0 0 / 15%);
+}
+
+.square {
+  padding: 0;
+}
+
+.square.size_m {
+  width: var(--font-line-m);
+  height: var(--font-line-m);
+
+  font-size: var(--font-size-m);
+}
+
+.square.size_l {
+  width: var(--font-line-l);
+  height: var(--font-line-l);
+
+  font-size: var(--font-size-l);
+}
+
+.square.size_xl {
+  width: var(--font-line-xl);
+  height: var(--font-line-xl);
+
+  font-size: var(--font-size-xl);
+}
+
+.round {
+  border-radius: 100%;
+}
+
+.size_m {
+  font: var(--font-m);
+}
+
+.size_l {
+  font: var(--font-l);
+}
+
+.size_xl {
+  font: var(--font-xl);
+}
